@@ -1,0 +1,44 @@
+#!/bin/bash
+#Initialize template filepaths
+base=0
+bash=/home/vagrant/scripts/bash.template
+empty=/home/vagrant/scripts/empty.template
+html=/home/vagrant/scripts/html.template
+cTemp=/home/vagrant/scripts/c.template
+
+
+#Prompt user for template to use
+echo Enter the desired template for all files created. Templates include 'c', 'html', 'bash', and 'empty'. If no template is selected, default to empty.
+read templateStr
+case $templateStr in
+    c | C)
+	template=$cTemp
+	;;
+    html | HTML)
+	template=$html
+	;;
+    bash)
+	template=$bash
+	;;
+    empty | EMPTY | "")
+	template=$empty
+	;;
+    *)
+esac
+
+#Infinite while loop due to legacy variable, but it works
+while [ "$base" != "$fileNum" ]
+do
+    echo Enter the desired filename or press q to quit
+    read fName
+#Break the loop if user enter q
+    if [ "$fName" == "q" ];
+	then break;
+    fi
+
+#Create the file and initialize it with the chosen template
+    touch "$fName"
+    cat $template > ./$fName
+    chmod u+x ./$fName
+    base=$base+1
+done
