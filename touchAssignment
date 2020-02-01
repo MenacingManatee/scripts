@@ -1,10 +1,10 @@
 #!/bin/bash
 #Initialize template filepaths
 base=0
-bash=/home/vagrant/scripts/templates/bash.template
-empty=/home/vagrant/scripts/templates/empty.template
-html=/home/vagrant/scripts/templates/html.template
-cTemp=/home/vagrant/scripts/templates/c.template
+bash=~/scripts/templates/bash.template
+empty=~/scripts/templates/empty.template
+html=~/scripts/templates/html.template
+cTemp=~/scripts/templates/c.template
 
 
 #Prompt user for template to use
