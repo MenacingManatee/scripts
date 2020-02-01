@@ -1,4 +1,20 @@
 #!/bin/bash
+
+##############################################
+
+#Script Name: Touch Assignment
+
+#Purpose: Create 1 or more files for holberton assignments based off of blank templates
+
+#Arguments: None, but user is prompted for template and file name
+
+#Author: Brett Davis
+
+#Version: 0.1
+
+##############################################
+
+
 #Initialize template filepaths
 base=0
 bash=~/scripts/templates/bash.template
@@ -27,8 +43,8 @@ case $templateStr in
     *)
 esac
 
-#Infinite while loop due to legacy variable, but it works
-while [ "$base" != "$fileNum" ]
+#Infinite while loop
+while [ true ]
 do
     echo Enter the desired filename or press q to quit
     read fName
@@ -51,5 +67,4 @@ do
 	    ;;
 	*)
     esac
-    base=$base+1
 done
