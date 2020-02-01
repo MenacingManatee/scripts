@@ -19,6 +19,7 @@ case $templateStr in
 	;;
     bash)
 	template=$bash
+	perms="executable"
 	;;
     empty | EMPTY | "")
 	template=$empty
@@ -31,6 +32,8 @@ while [ "$base" != "$fileNum" ]
 do
     echo Enter the desired filename or press q to quit
     read fName
+
+
 #Break the loop if user enter q
     if [ "$fName" == "q" ];
 	then break;
@@ -39,6 +42,14 @@ do
 #Create the file and initialize it with the chosen template
     touch "$fName"
     cat $template > ./$fName
-    chmod u+x ./$fName
+
+
+#Adds potential for variable perms based on template later
+    case $perms in
+	executable)
+	    chmod u+x ./$fName
+	    ;;
+	*)
+    esac
     base=$base+1
 done
