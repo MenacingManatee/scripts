@@ -40,6 +40,9 @@ case $templateStr in
     empty | EMPTY | "")
 	template=$empty
 	;;
+    executable)
+	template=$empty
+	perms="executable"
     *)
 esac
 
