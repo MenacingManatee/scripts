@@ -30,17 +30,17 @@ case $templateStr in
     c | C)
 	template=$cTemp
 	;;
-    html | HTML)
+    html | HTML | Html)
 	template=$html
 	;;
-    bash)
+    bash | Bash | BASH)
 	template=$bash
 	perms="executable"
 	;;
     empty | EMPTY | "")
 	template=$empty
 	;;
-    executable)
+    executable | x | EXECUTABLE)
 	template=$empty
 	perms="executable"
     *)
