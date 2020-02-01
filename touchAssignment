@@ -26,7 +26,11 @@ java=~/scripts/templates/java.template
 
 
 #Prompt user for template to use
-echo Enter the desired template for all files created. Templates include 'c', 'c++', 'java', 'html', 'bash', and 'empty'. If no template is selected, default to empty.
+echo "Enter the desired template for all files created.
+OPTIONS MENU
+c - c++ - java
+html - bash - empty
+executable"
 read templateStr
 case $templateStr in
     c | C)
