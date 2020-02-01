@@ -1,4 +1,4 @@
-#Description of script functions
+#Description of script functions#
 
 **Script name:**
 touchAssignment
