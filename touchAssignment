@@ -53,6 +53,7 @@ case $templateStr in
 	template=$cPlusplus
 	;;
     *)
+	template=$empty
 esac
 
 #Infinite while loop
