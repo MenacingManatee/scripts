@@ -21,10 +21,12 @@ bash=~/scripts/templates/bash.template
 empty=~/scripts/templates/empty.template
 html=~/scripts/templates/html.template
 cTemp=~/scripts/templates/c.template
+cPlusplus=~/scripts/templates/cplusplus.template
+java=~/scripts/templates/java.template
 
 
 #Prompt user for template to use
-echo Enter the desired template for all files created. Templates include 'c', 'html', 'bash', and 'empty'. If no template is selected, default to empty.
+echo Enter the desired template for all files created. Templates include 'c', 'c++', 'java', 'html', 'bash', and 'empty'. If no template is selected, default to empty.
 read templateStr
 case $templateStr in
     c | C)
@@ -43,6 +45,13 @@ case $templateStr in
     executable | x | EXECUTABLE)
 	template=$empty
 	perms="executable"
+	;;
+    java | JAVA | Java)
+	template=$java
+	;;
+    c++ | C++ | cplusplus | Cplusplus | CPlusPlus)
+	template=$cPlusplus
+	;;
     *)
 esac
 
