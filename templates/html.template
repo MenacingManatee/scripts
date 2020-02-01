@@ -1,11 +1,36 @@
 <!doctype html>
 <html lang="en">
+
       <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Default HTML template</title>
       </head>
+
+
       <body>
-	<h1>HTML default template</h1>
-	<p>Placeholder paragraph</p>
+
+	<header>
+
+
+	</header>
+
+	<main>
+
+	  <article>
+
+	    <h1>HTML default template</h1>
+	    <p>Placeholder paragraph</p>
+
+	  </article>
+
+	  <aside>
+
+
+	  </aside>
+
+	</main>
+
       </body>
+
 </html>
