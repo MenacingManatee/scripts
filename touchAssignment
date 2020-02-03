@@ -10,7 +10,7 @@
 
 #Author: Brett Davis
 
-#Version: 0.1
+#Version: 0.2
 
 ##############################################
 
@@ -26,6 +26,7 @@ java=~/scripts/templates/java.template
 
 
 #Prompt user for template to use
+function select_template () {
 echo "Enter the desired template for all files created.
 OPTIONS MENU
 c - c++ - java
@@ -59,17 +60,26 @@ case $templateStr in
     *)
 	template=$empty
 esac
-
+}
+function fileName () {
 #Infinite while loop
 while [ true ]
 do
-    echo Enter the desired filename or press q to quit
+    echo Enter the desired filename or press q to quit. You may also press t to change template.
     read fName
 
 
 #Break the loop if user enter q
     if [ "$fName" == "q" ];
 	then break;
+    fi
+
+#Calls select_template if user presses t
+    if [ "$fName" == "t" ]
+	then 
+	select_template
+	fileName
+	break
     fi
 
 #Create the file and initialize it with the chosen template
@@ -85,3 +95,7 @@ do
 	*)
     esac
 done
+}
+select_template
+fileName
+exit
