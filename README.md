@@ -1,4 +1,16 @@
-#Description of script functions#
+# touchAssignment
+
+## Getting started:
+
+Templates folder is required to run script. By default, script looks for templates in ~/scripts/templates. You may change this as needed from the executable.
+
+###Installation
+
+To install, call chmod +x on touchAssignment, then call sudo mv touchAssignment /bin/
+
+#### Author:
+
+Brett Davis
 
 **Script name:**
 touchAssignment
