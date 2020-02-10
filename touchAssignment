@@ -76,7 +76,7 @@ do
 
 #Calls select_template if user presses t
     if [ "$fName" == "t" ]
-	then 
+	then
 	select_template
 	fileName
 	break
@@ -91,6 +91,9 @@ do
     case $perms in
 	executable)
 	    chmod u+x ./$fName
+	    ;;
+	"read" || "readonly")
+            chmod 744 ./$fName
 	    ;;
 	*)
     esac
