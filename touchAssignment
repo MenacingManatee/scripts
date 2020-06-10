@@ -23,7 +23,7 @@ html=~/scripts/templates/html.template
 cTemp=~/scripts/templates/c.template
 cPlusplus=~/scripts/templates/cplusplus.template
 java=~/scripts/templates/java.template
-
+python=~/scripts/templates/python.template
 
 #Prompt user for template to use
 function select_template () {
@@ -56,6 +56,10 @@ case $templateStr in
 	;;
     c++ | C++ | cplusplus | Cplusplus | CPlusPlus)
 	template=$cPlusplus
+	;;
+    py | python)
+	template=$python
+	perms="executable"
 	;;
     *)
 	template=$empty
